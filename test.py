@@ -1,1 +1,1 @@
-import pygame
+import faker
