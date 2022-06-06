@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'junctions/css/master.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+    <title>Junc</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div >
+                <a  class="logo" href="{% url 'home' %}">
+                <strong>JuncView</strong>
+                </a>
+            </div>
+            <ul class="class">
+                <li>
+                    <a href="{% url 'junc:all' %}">LstAll</a>
+                </li>
+                <li>
+                    <a href="#">Details</a>
+                </li>
+                <li>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+</body>
+
+{% block content %}
+  
+{% endblock content %}
+
+</html>

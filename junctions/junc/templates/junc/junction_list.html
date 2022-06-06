@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  {% for junction in junction_list %}
+  
+<div class="plate">
+   <p>Junction : <strong>{{junction.corr}}-{{junction.mark}}</strong></p>
+   <p>Status : <strong>{{junction.status}}</strong></p>
+      <div class="last-line">
+         <a href="#">detalji</a>
+         <a href="#">izmeni</a>
+      </div>
+</div>
+
+ 
+  {% endfor %}
+   
+  
+
+</div>
+
+
+  
+{% endblock content %}
