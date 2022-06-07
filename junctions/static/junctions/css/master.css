@@ -23,28 +23,89 @@ ul {
     justify-content: space-evenly;
 } */
 
+.main {
+    margin-left: 10%; 
+    font-size: 1em; 
+    padding: 50px 10px;
+}
+
+
+
+.side {
+    max-width: 250px;
+    position: fixed;
+    z-index: 1;
+    font-size: 1.3em;
+    top: 120px;
+    left: 10px;
+    background: rgb(192, 123, 11);
+    color: rgb(255, 255, 255);  
+    overflow-x: hidden;
+    padding: 10px 15px;
+    padding-right: 90px;
+    border-radius: 10px;
+
+    
+}
+
+.side h2{
+    font-size: 2em;
+}
+
+.side a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #2196F1;
+    display: block;
+
+    
+}
+  
+.side a:hover {
+    color: #064579;
+}
+
 .plate {
     background: #84a1c11a;
     color: rgb(0, 0, 0);
     padding: 5px;
     border-radius: 15px;
-    width: 100%;
-    max-width: 300px;
+    width: 200px;
+    max-height: 140px;
     margin: 0.5em;
     border-bottom: 4px solid rgba(98, 96, 96, 0.27);
 }
 
+.container2{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
 
+.container2 .plate {
+    position: relative;
+    margin: 5px;
+}
 
 
 
 .container{
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 30px; 
+    padding: 0 30px;
 }
 
+
+
 .navbar{
+    position: fixed;
+    width: 100%;
+    top: 0px;
     background: rgb(3, 3, 53);
     color: white;  
     height: 60px;

@@ -2,23 +2,33 @@
 
 {% block content %}
 
-<div class="container">
-  {% for junction in junction_list %}
-  
-<div class="plate">
-   <p>Junction : <strong>{{junction.corr}}-{{junction.mark}}</strong></p>
-   <p>Status : <strong>{{junction.status}}</strong></p>
-      <div class="last-line">
-         <a href="#">detalji</a>
-         <a href="#">izmeni</a>
-      </div>
-</div>
 
- 
-  {% endfor %}
+<div class="main">
+    <div class="container2">
    
-  
-
+    
+      {% for junction in junction_list %}
+      
+        <div class="plate">
+          <p>Junction : <strong>{{junction.corr}}-{{junction.mark}}</strong></p>
+          <p>Status : <strong>{{junction.status}}</strong></p>
+              <div class="last-line">
+                <a href="#">detalji</a>
+                <a href="#">izmeni</a>
+              </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="side">
+      <div class="desc">
+          <div class="tit">
+          <h2><u>List All</u></h2>
+          </div>
+          <h3>Count</h3>
+          <p>Iseceno : <strong>89</strong></p>
+          <p>Uhaseno : <strong>8</strong></p>
+       
+      </div>
 </div>
 
 
