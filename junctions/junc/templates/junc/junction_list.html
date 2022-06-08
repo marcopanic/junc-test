@@ -13,7 +13,7 @@
           <p>Junction : <strong>{{junction.corr}}-{{junction.mark}}</strong></p>
           <p>Status : <strong>{{junction.status}}</strong></p>
               <div class="last-line">
-                <a href="#">detalji</a>
+                <a href="{% url 'junc:detail' pk=junction.pk %}">detalji</a>
                 <a href="#">izmeni</a>
               </div>
         </div>
@@ -26,9 +26,9 @@
           </div>
           <h3>Count</h3>
           <p>Pun Rezim : <strong>{{ pr }}</strong></p>
-          <p>Part Time : <strong>{{ junction.corr }}</strong></p>
-          <p>Nema Struje : <strong>{{ junction.corr }}</strong></p>
-          <p>Iskljucena : <strong>{{ junction.corr }}</strong></p>
+          <p>Part Time : <strong>{{ pt }}</strong></p>
+          <p>Nema Struje : <strong>{{ ns }}</strong></p>
+          <p>Iskljucena : <strong>{{ isk }}</strong></p>
        
       </div>
 </div>

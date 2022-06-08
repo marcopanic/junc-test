@@ -24,6 +24,8 @@ ul {
 } */
 
 .main {
+    display: flex;
+    flex-direction: row;
     margin-left: 10%; 
     font-size: 1em; 
     padding: 50px 10px;
@@ -42,7 +44,7 @@ ul {
     color: rgb(255, 255, 255);  
     overflow-x: hidden;
     padding: 10px 15px;
-    padding-right: 90px;
+    padding-right: 80px;
     border-radius: 10px;
 
     
@@ -100,7 +102,24 @@ ul {
     padding: 0 30px;
 }
 
+.button1 {
+    background: rgb(214, 139, 18);
+    color: rgb(255, 255, 255);  
+    padding: 7px;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+    max-width: 140;
+    max-height: 40px;
+    margin: 0.7em;
+    border-radius: 7px;
+    border-bottom: 4px solid rgba(154, 113, 86, 0.931);
+    
+}
 
+.button1 :hover {
+    color: #064579;
+}
 
 .navbar{
     position: fixed;
@@ -154,8 +173,14 @@ ul {
         text-align: center;
     }
 
-    .boxes .container{
-        display: block;
-        text-align: center;
+    .side {
+        position: absolute;
+        z-index: -2;
+        scale: 0.5;
+        padding-right: 10px;
+        flex-direction: column;
+        overflow-x: auto;
+        font-size: 0.85em;
+       
     }
 }
