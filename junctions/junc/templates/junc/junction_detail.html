@@ -5,33 +5,37 @@
 
 <div class="main">
     <div class="container2">
-   
-    
-     
-      
-        <div class="plate">
-            <p>Junction : <strong>{{junction.corr}}-{{junction.mark}}</strong></p>
+
+
+
+
+        <div class="plate-detail">
+            <div class="whtbck">
+                <p>Junction : <strong>{{junction.corr}}-{{junction.mark}}</strong></p>
+            </div>
             <p>Status : <strong>{{junction.status}}</strong></p>
             <p>Potrebni gradj. radovi: <strong>{{junction.civil_works_need}}</strong></p>
             <p>Dodatni Info : <strong>{{junction.add_info}}</strong></p>
-        
+
             <a href="{% url 'junc:all' %}">
-                <button type="button" class="button1">Nazad</button>
+                <button type="button" class="button1">&#8592;Nazad</button>
             </a>
-        
+
         </div>
     </div>
     <div class="side">
-      <div class="desc">
-          <div class="tit">
-          <h2><u>Detail</u></h2>
-          <p>Junction</p>
-          <h2>{{junction.corr}}-{{junction.mark}}</h2>
-          </div>
+        <div class="desc">
+            <div class="tit">
+                <h2><u>Detail</u></h2>
+                <p>Junction</p>
+                <h2>{{junction.corr}}-{{junction.mark}}</h2>
+            </div>
 
-      </div>
+        </div>
+    </div>
+ 
+
 </div>
-
-
-  
+    
+    
 {% endblock content %}

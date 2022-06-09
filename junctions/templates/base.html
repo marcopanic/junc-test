@@ -19,13 +19,16 @@
             </div>
             <ul class="class">
                 <li>
-                    <a href="{% url 'junc:all' %}">LstAll</a>
+                    <a href="{% url 'junc:all' %}">List All</a>
                 </li>
                 <li>
-                    <a href="#">Details</a>
+                    <a href="{% url 'junc:create' %}">NEW Junc </a>
                 </li>
                 <li>
-                    <a href="{% url 'home' %}">Home</a>
+                    <a id="det"   href="{% url 'junc:alldet' %}">Details</a>
+                </li>
+                <li>
+                    <a id="home" href="{% url 'home' %}">Home</a>
                 </li>
             </ul>
         </div>

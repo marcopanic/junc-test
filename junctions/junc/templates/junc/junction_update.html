@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="main">
+    <div class="container2">
+   
+    
+     
+      
+        <div class="plate-detail">
+            <form method="POST" action="">
+                {% csrf_token %} {{form.as_p}}
+                <input class="button1" type="submit" value="Sacuvaj">
+            </form>
+        
+        </div>
+    </div>
+
+    <div class="side">
+        <div class="desc">
+            <div class="tit">
+                <h2><u>UPDATE</u></h2>
+                <p>Junction</p>
+                <h2>{{junction.corr}}-{{junction.mark}}</h2>
+            </div>
+            <a href="{% url 'junc:all' %}">
+                <button type="button" class="button2">&#8592;Nazad</button>
+            </a>
+            <a href="{% url 'junc:all' %}">
+                <button type="button" class="button3">X</button>
+            </a>
+
+        </div>
+    </div>
+    
+</div>
+
+
+  
+{% endblock content %}

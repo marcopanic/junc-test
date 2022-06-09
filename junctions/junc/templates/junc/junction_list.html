@@ -14,7 +14,7 @@
           <p>Status : <strong>{{junction.status}}</strong></p>
               <div class="last-line">
                 <a href="{% url 'junc:detail' pk=junction.pk %}">detalji</a>
-                <a href="#">izmeni</a>
+                <a href="{% url 'junc:update' pk=junction.pk %}">izmeni</a>
               </div>
         </div>
       {% endfor %}
@@ -24,7 +24,7 @@
           <div class="tit">
           <h2><u>List All</u></h2>
           </div>
-          <h3>Count</h3>
+          <h2>Count</h2>
           <p>Pun Rezim : <strong>{{ pr }}</strong></p>
           <p>Part Time : <strong>{{ pt }}</strong></p>
           <p>Nema Struje : <strong>{{ ns }}</strong></p>

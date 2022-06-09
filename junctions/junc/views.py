@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import View
 from django.views.generic import TemplateView
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -32,3 +32,31 @@ class JuncList(ListView):
 class JuncDetail(DetailView):
     model = models.Junction
     select_related = ('corr', 'mark')
+
+
+
+class JuncAlldet(ListView):
+    model = models.Junction
+    select_related = ('corr', 'mark')
+    template_name = 'junc/junction_all_detail.html'
+
+
+class JuncCreate(CreateView):
+    model = models.Junction
+    fields = ('corr', 'mark','status','needs','civil_works_need','cables_cut','add_info')
+    success_url = reverse_lazy('junc:all')
+
+
+class JuncUpdate(UpdateView):
+    template_name = 'junc/junction_update.html'
+    model = models.Junction
+    fields = ('corr', 'mark','status','needs','civil_works_need','cables_cut','add_info')
+    #fields = {'corr':'koridor', 'mark':'oznaka','status':'stanje','needs':'potreba','civil_works_need':'gradj. radovi','cables_cut':'iseceni kablovi','add_info':'dodatni info'}
+    success_url = reverse_lazy('junc:all')
+
+    # class Meta:
+        
+    #     def __init__(self, *args, **kwargs):
+    #         super().__init__(*args, **kwargs)
+    #         self.fields['add_info'].label = 'Dodatne'
+            

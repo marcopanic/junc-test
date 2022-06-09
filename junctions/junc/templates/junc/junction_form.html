@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="main">
+    <div class="container2">
+   
+    
+     
+      
+        <div class="plate-detail">
+            <form method="POST" action="">
+                {% csrf_token %} {{form.as_p}}
+                <input class="button1" type="submit" value="Kreiraj">
+            </form>
+        
+        </div>
+    </div>
+
+
+    <div class="side">
+        <div class="desc">
+            <div class="tit">
+                <h2><u>CREATE</u></h2>
+                <p>Junction</p>
+
+                <a href="{% url 'junc:all' %}">
+                    <button type="button" class="button2">&#8592;Nazad</button>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+
+
+  
+{% endblock content %}

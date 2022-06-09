@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <div class="container3">
+   
+    
+      {% for junction in junction_list %}
+      
+        <div class="row">
+            <div class="box">
+                <p>Junction</p>
+                <strong>{{junction.corr}}-{{junction.mark}}</strong>
+            </div>  
+            <div class="box">
+                <p>Status</p>
+                <strong>{{junction.status}}</strong>
+            </div>
+            <div class="box">
+                <p>Potrebno</p>
+                <strong id="potrebno">{{junction.needs}}</strong>
+            </div>
+            <div class="box-inf">
+                <p>Informacije</p>
+                <strong id="inf">{{junction.add_info}}</strong>
+            </div>
+            <div class="box-edit">
+                <p id="edit"> <a href="{% url 'junc:update' pk=junction.pk %}">&#x270E;</a></p>
+                
+            </div>
+            
+            
+        </div>
+        <div class="line"></div>
+      {% endfor %}
+    </div>
+    
+
+
+    
+    
+{% endblock content %}
