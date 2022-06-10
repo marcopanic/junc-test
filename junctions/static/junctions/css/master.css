@@ -66,11 +66,19 @@ ul {
     color: rgb(0, 0, 0);
     padding: 5px;
     border-radius: 15px;
-    width: 200px;
-    max-height: 140px;
+    width: 250px;
+    max-height: 180px;
     margin: 0.5em;
     border-bottom: 4px solid rgba(98, 96, 96, 0.27);
 }
+
+.plate a{
+    text-decoration: none;
+    color: rgb(242, 129, 37);  
+    font-weight: bold;  
+}
+
+
 
 .plate-detail {
     background: #84a1c11a;
@@ -147,7 +155,7 @@ ul {
 }
 
 .box-inf #inf:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.7s;
 
 }
@@ -163,11 +171,12 @@ ul {
 
 .box-edit a{
     text-decoration: none;
+    color: rgb(32, 47, 78);
 }
 
 
 .box-edit #edit:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.7s;
 
 }
@@ -217,6 +226,11 @@ ul {
 
 }
 
+.button1:hover {
+    transform: scale(1.05);
+    transition: 0.7s;
+}
+
 .button2 a{
     color: white;
     text-decoration: none;
@@ -240,10 +254,7 @@ ul {
     border-bottom: 4px solid rgba(154, 113, 86, 0.931);
     
 }
-.button1:hover {
-    transform: scale(1.1);
-    transition: 0.7s;
-}
+
 
 
 .button2:hover {
@@ -251,6 +262,66 @@ ul {
     transition: 0.7s;
 }
 
+.button4 {
+    width: 100%;
+    
+    color: rgb(122, 113, 113);  
+    
+    padding-bottom: 10px;
+   
+    
+    
+    
+}
+
+.button4 a{
+   text-decoration: none;
+   font-size: 1.5em;
+    
+    
+}
+.button4 a:hover {
+   color: rgb(120, 201, 191);
+}
+
+
+
+/* .button3 {
+    background: rgb(255, 255, 255); 
+    color: rgb(255, 255, 255); 
+    padding: 7px;
+    padding-bottom: 10px;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    width: 100%;
+    max-height: 70px;
+    margin: 0 auto;
+    border-radius: 7px;
+    border-top: 4px solid rgba(255, 255, 255, 0.931);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.931);
+    
+} */
+
+
+
+.button3 {
+    border: none;
+    color: #f6f6f6;
+    text-decoration: none;
+    font-size: 2em;
+    max-width: 70px;
+    width: 100%;
+    max-height: 70px;
+    margin: 0 auto;
+    text-decoration: none;   
+}
+
+#bt3 {
+    color: #f6f6f6;
+    text-decoration: none;
+
+}
 
 .button3:hover {
     transform: scale(1.1);
@@ -259,27 +330,9 @@ ul {
 
 
 
-
-
-.button3 {
-    background: rgb(34, 34, 78); 
-    color: rgb(255, 255, 255); 
-    padding: 7px;
-    padding-bottom: 10px;
-    border: none;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 2em;
-    width: 100%;
-    max-height: 70px;
-    margin: 0 auto;
-    border-radius: 7px;
-    border-top: 4px solid rgba(255, 255, 255, 0.931);
-    border-bottom: 4px solid rgba(255, 255, 255, 0.931);
-    
-}
-
 .container2 a:hover{
-    color: rgb(131, 192, 213);
+    color: black;
+    transform: scale(0.9);
      
 }
 
@@ -409,8 +462,13 @@ textarea {
         border-top: 5px solid rgba(98, 96, 96, 0.27);
     }
 
+    .plate-detail {
+        transform: scale(0.8);
+    }
+
+    .container3 {
+        transform: scale(0.9);
+    }
+
 }
 
-.plate-detail {
-    scale: 0.8;
-}

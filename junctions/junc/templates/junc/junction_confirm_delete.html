@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="container3">
+    <div class="button4">
+        <a href="{% url 'junc:all' %}">&#8592;Vrati se nazad</a>
+    
+    </div>
+
+
+
+
+    <form method="POST">
+        {% csrf_token %}
+        <h3>Da li ste sigurni da zelite da obrisete raskrsnicu <b> <strong>{{junction.corr}}-{{junction.mark}}</strong> </b> ?</h3>
+        <input class="button1" type="submit" value="Obrisi" />
+    </form>
+    
+</div>
+
+
+  
+{% endblock content %}

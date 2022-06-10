@@ -28,8 +28,8 @@
             <a href="{% url 'junc:all' %}">
                 <button type="button" class="button2">&#8592;Nazad</button>
             </a>
-            <a href="{% url 'junc:all' %}">
-                <button type="button" class="button3">X</button>
+            <a id="bt3" href="{% url 'junc:delete' pk=junction.pk %}">
+                <div class="button3">&#x2716;</div>
             </a>
 
         </div>

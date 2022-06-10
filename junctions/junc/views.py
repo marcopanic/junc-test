@@ -52,6 +52,7 @@ class JuncUpdate(UpdateView):
     model = models.Junction
     fields = ('corr', 'mark','status','needs','civil_works_need','cables_cut','add_info')
     #fields = {'corr':'koridor', 'mark':'oznaka','status':'stanje','needs':'potreba','civil_works_need':'gradj. radovi','cables_cut':'iseceni kablovi','add_info':'dodatni info'}
+    
     success_url = reverse_lazy('junc:all')
 
     # class Meta:
@@ -60,3 +61,8 @@ class JuncUpdate(UpdateView):
     #         super().__init__(*args, **kwargs)
     #         self.fields['add_info'].label = 'Dodatne'
             
+
+class JuncDelete(DeleteView):
+    model = models.Junction
+    success_url = reverse_lazy('junc:all')
+    

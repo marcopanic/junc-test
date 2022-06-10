@@ -35,8 +35,8 @@ class Junction(models.Model):
     civil_works_need = models.BooleanField(default=False)
     cables_cut = models.BooleanField(default=False)
     add_info = models.TextField(max_length=110, default='', blank=True)
-    created_at = models.DateTimeField(auto_now=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True, editable=False, null=False, blank=False)
+    updated_at = models.DateTimeField(auto_now=True, editable=False, null=False, blank=False)
     name_updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:

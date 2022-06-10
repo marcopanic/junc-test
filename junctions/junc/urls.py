@@ -9,5 +9,6 @@ urlpatterns = [
     path('<int:pk>/', views.JuncDetail.as_view(), name='detail'),
     path('create/', views.JuncCreate.as_view(), name='create'),
     path('update/<int:pk>/', views.JuncUpdate.as_view(), name='update'),
-    path('alldet', views.JuncAlldet.as_view(), name='alldet')
+    path('alldet', views.JuncAlldet.as_view(), name='alldet'),
+    path('delete/<int:pk>/', views.JuncDelete.as_view(), name='delete')
 ]
