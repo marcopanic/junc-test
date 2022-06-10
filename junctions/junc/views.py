@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
 from django.views.generic import TemplateView
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, FormView
 from django.urls import reverse_lazy
 from django.db.models import Q, Count
 from . import models
-from junc.models import Junction
+from django.contrib.auth.forms import UserCreationForm  
+from junc.models import Junction, Employee
 
 
 # Create your views here.
@@ -65,4 +66,24 @@ class JuncUpdate(UpdateView):
 class JuncDelete(DeleteView):
     model = models.Junction
     success_url = reverse_lazy('junc:all')
+
+
+class RegisterUser(FormView):
+    model = models.Employee
+    template_name = 'junc/signup.html'
     
+    form_class = UserCreationForm
+    redirect_authenticated_user = True
+
+    success_url = reverse_lazy('junc:all')
+
+    def form_valid(self, form):
+        user = form.save()
+        if user is not None:
+            login(self.request, user)
+        return super(RegisterUser, self).form_valid(form)
+
+    def get(self, *args, **kwargs):
+        if self.request.user.is_authenticated:
+            return redirect('junc:all')
+        return super(RegisterUser, self).get(*args, **kwargs)

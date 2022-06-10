@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
-from .views import JuncCreate, JuncDetail, JuncList, JuncUpdate
+from .views import JuncCreate, JuncDetail, JuncList, JuncUpdate, RegisterUser
+from django.contrib.auth.views import LogoutView
 
 app_name = 'junc'
 
@@ -10,5 +11,6 @@ urlpatterns = [
     path('create/', views.JuncCreate.as_view(), name='create'),
     path('update/<int:pk>/', views.JuncUpdate.as_view(), name='update'),
     path('alldet', views.JuncAlldet.as_view(), name='alldet'),
-    path('delete/<int:pk>/', views.JuncDelete.as_view(), name='delete')
+    path('delete/<int:pk>/', views.JuncDelete.as_view(), name='delete'),
+    path('register/', views.RegisterUser.as_view(), name='register'),
 ]
