@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Junction, Employee
+from .models import Junction
 from import_export.admin import ImportExportModelAdmin
 
 # Register your models here.
@@ -11,4 +11,3 @@ class JuncData(ImportExportModelAdmin):
     pass
 
 
-admin.site.register(Employee)

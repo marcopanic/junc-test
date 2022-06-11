@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.db.models import Q, Count
 from . import models
 from django.contrib.auth.forms import UserCreationForm  
-from junc.models import Junction, Employee
+from junc.models import Junction
 
 
 # Create your views here.
@@ -69,7 +69,7 @@ class JuncDelete(DeleteView):
 
 
 class RegisterUser(FormView):
-    model = models.Employee
+    model = models.Junction
     template_name = 'junc/signup.html'
     
     form_class = UserCreationForm

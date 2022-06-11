@@ -1,29 +1,8 @@
 from django.db import models
 from django.urls import reverse
-from django.contrib.auth.models import AbstractUser
 
 
 
-class Employee(AbstractUser):
-    SUPADMIN = 1
-    TECH = 2
-    GUEST =3
-      
-    ROLE_CHOICES = [
-          (SUPADMIN, 'Supadmin'),
-          (TECH, 'Tech'),
-          (GUEST, 'Guest'),
-      ]
-
-
-    user_name = models.CharField(max_length=20, default='', blank=True, unique=True)
-    first_name = models.CharField(max_length=50)
-    last_name  = models.CharField(max_length=50)
-    role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, blank=True, null=True)
-    
-
-    def __str__(self):
-        return '{} - {}'.format(self.first_name, self.last_name)
 
 
 class Junction(models.Model):
